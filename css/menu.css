@@ -61,9 +61,16 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
 }
+button {
+    background-color: rgb(0, 4, 17, .8);
+    border: rgb(0, 4, 17, .8) solid 1px;
+    padding: 5px 5px;
+}
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: rgb(225, 239, 230);
+    align-items: center;
 }
 
 h1 {
@@ -80,6 +87,12 @@ h3 {
 
 h4 {
     font-size: 4rem;
+    padding-top: 8%;
+}
+
+h5 {
+    font-size: 4rem;
+    padding-top: 8%;
 }
 
 p, a {
@@ -94,6 +107,29 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+header div {
+    background-color: rgb(0, 4, 17, .8);
+}
+header h1 {
+    padding: 2% 2%;
+    text-align: center;
+}
+header nav {
+    display:flex;
+    width:80%;
+    height: 6vh;
+    text-align: center;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.logos {
+    height:50px;
+    width: 20%;
+}
+.logos .fa-brands {
+    font-size:32px;
 }
 
 /* spacer */
@@ -114,18 +150,117 @@ header {
     width: 100%;
     height: auto;
     background-image: url('../img/staff-bartender.jpg');
-    background-color: rgb(0, 4, 17);
+    /* background-color: rgb(0, 4, 17); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: rgb(0, 4, 17, .8);
 }
-
+.menu-container {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 4, 17, .8);
+}
+.menutitle {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4%;
+}
+.menuitems {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.menu-section {
+    height: 50vh;
+    width: 30%;
+    margin: 3% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.drinksection {
+    padding-top: 10%;
+}
+.sssection {
+    padding-top: 18%;
+}
+.itemcost {
+    display: flex;
+    width: 100%;
+    /* border: 3px solid green; */
+}
+.itemcost h4 {
+    display: flex;
+    width: 86%;
+    text-align: left;
+    /* border: 3px solid purple; */
+}
+.itemcost h5 {
+    display: flex;
+    width: 14%;
+    justify-content: flex-end;
+    /* border: 3px solid purple; */
+}
 /* footer section */
 footer {
+    display:flex;
+    justify-content: space-around;
     width: 100%;
     height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17);
+}
+.last {
+    display: flex;
+    flex-flow: row-wrap;
+    flex-direction: column;
+    align-items: center;
+    width:35%;
+}
+.last p {
+    font-size: 4rem;
+}
+.signupp {
+    display: flex;
+    flex-direction: row;
+}
+.signup {
+    font-size:0.3rem;
+}
+.signup a {
+    background-color:rgb(225, 239, 230);
+    color:black;
+}
+
+.lastpart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:65%;
+}
+.lastlinks {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding: 2%;
+}
+.lastlinks nav {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    flex-flow: row-wrap;
+}
+.lastpart p {
+    font-size: 2rem;
+    text-align:right;
+    width:90%;
 }
 
 /* mobile media query */
@@ -137,16 +272,187 @@ footer {
         text-align: center;
         font-size: 4rem;
     }
-
-    /* menu */
-    .menu {
-        background-image: none;
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header h1{
+        width: 70%;
+        font-size:3.7rem;
+    }
+    header div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 47%;
+    }
+    
+    .links {
+        display: flex;
+        flex-direction: column;
+        margin:auto;
+        height:auto;
+    }
+    .links a {
+        font-size: 2.5rem;
+    }
+    .logos {
+        display:flex;
+        flex-direction: row;
+        margin: auto;
+    }
+    .logos .fa-brands {
+        font-size: 20px;
     }
 
+    /* menu */
+    .menu-section h4 {
+        font-size: 4rem;
+        padding-top: 0%;
+    }
+    .menu-section h5 {
+        font-size: 4rem;
+        padding-top: 0%;
+    }
+    .menutitle h2 {
+        text-decoration: none;
+        color: rgb(0, 4, 17);
+    }
+    .menu-section h4, h5 {
+        text-decoration: none;
+        color: rgb(0, 4, 17);
+        text-align: center;
+    }
+    .menu-section p {
+        text-decoration: none;
+        color: rgb(0, 4, 17);
+        text-align: center;
+    }
+    .menu-section h3 {
+        text-decoration: none;
+        color: rgb(0, 4, 17);
+        align-items: center;
+        border:solid rgb(0, 4, 17);
+        margin-top: 30%;
+        margin-bottom: 7%;
+        text-align: center;
+    }
+    .menu {
+        width: 100%;
+        height: auto;
+        background-image:none;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: none;
+    }
+    .menu-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(225, 239, 230);
+    }
+    .menutitle {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0%;
+    }
+    .menuitems {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 60%;
+    }
+    .menu-section {
+        height: auto;
+        width: 100%;
+        margin: 0% 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        border-bottom: 3px solid rgb(0, 4, 17);
+    }
+    .drinksection {
+        padding-top:0%;
+    }
+    .sssection {
+        padding-top: 0%;
+    }
+    .itemcost {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* border: 3px solid green; */
+    }
+    .itemcost h4 {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        color: rgb(0, 4, 17);
+        /* border: 3px solid purple; */
+    }
+    .itemcost h5 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        color: rgb(0, 4, 17);
+        /* border: 3px solid purple; */
+    }
     /* footer section */
     footer {
+        width: 100%;
         height: auto;
-        padding-top: 2.5vh;
         font-size: 2rem;
+        padding-top: 0vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    footer p {
+        width:100%;
+        font-size:2rem;
+        text-align: center;
+        margin: 2 auto;
+    }
+    .last {
+        width: 100%;
+    }
+    .last p {
+        font-size: 2rem;
+    }
+    
+    .signup {
+        width:100%;
+        text-align: center;
+    }
+    .signupp {
+        flex-direction: column;
+    }
+    .signup a {
+        font-size: 1.3rem;
+    }
+    .lastpart {
+
+        align-items: center;
+    }
+    .lastlinks {
+        flex-direction: column;
+    }
+    .lastlinks a {
+        font-size: 2rem;
+    }
+    .lastpart p {
+        font-size: 1.3rem;
+        text-align: center;
+        width: 90%;
+        padding-bottom: 2%;
     }
 }
